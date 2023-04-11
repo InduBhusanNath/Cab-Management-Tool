@@ -16,5 +16,5 @@ hide_user_form.onclick=function(){
      refreshPage();
 }
 //validate User Form
-
+var add_user_form=document.getElementById("add_user_form");
     
