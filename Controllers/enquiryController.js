@@ -11,30 +11,20 @@ const enquiryModel=require('../Models/enquiryModel.js');
         n_prospectfrom:req.body.n_prospectfrom,
         n_prospectto:req.body.n_prospectto
     };
-   /* var insert_data={
-         'trip_type':received_data.trip_type,
-         'pickupdate':received_data.n_pickupdate,
-         'returndate':received_data.n_returndate,
-         'pickuptime':received_data.n_pickuptime,
-         'prospectName':received_data.n_prospectName,
-         'prospectPhone':received_data.n_prospectPhone,
-         'prospectfrom':received_data.n_prospectfrom,
-         'prospectto':received_data.n_prospectto
-    };
-    */
-    var insert_data=[
-     received_data.trip_type,
-     received_data.n_pickupdate,
-     received_data.n_returndate,
-     received_data.n_pickuptime,
-     received_data.n_prospectName,
-     received_data.n_prospectPhone,
-     received_data.n_prospectfrom,
-     received_data.n_prospectto
-    ];
-    var msg=enquiryModel.insert_query(insert_data, function(result){
-     res.send(result);
-    });
+   
+      var insert_data=[
+           received_data.trip_type,
+           received_data.n_pickupdate,
+           received_data.n_returndate,
+           received_data.n_pickuptime,
+           received_data.n_prospectName,
+           received_data.n_prospectPhone,
+           received_data.n_prospectfrom,
+           received_data.n_prospectto
+      ];
+     enquiryModel.insert_query(insert_data, function(result){
+           res.send(result);
+     });
     
     
     
